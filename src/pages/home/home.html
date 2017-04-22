@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-avatar item-left>
+       <img src="{{item.picture.thumbnail}}">
+     </ion-avatar>
+     <h2>{{item.name.first}}</h2>
+     <p>{{item.email}}</p>
+     <button ion-button (click)="peopleDetail(item)">detail</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
